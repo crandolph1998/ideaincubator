@@ -1,0 +1,15 @@
+---
+interface Props {
+  href?: string;
+  variant?: 'default' | 'outline';
+}
+
+const { href, variant = 'default' } = Astro.props;
+const base = 'inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition';
+const classes =
+  variant === 'outline'
+    ? `${base} border border-white/30 text-white hover:border-accent hover:text-accent`
+    : `${base} bg-primary text-white shadow-glow hover:bg-primary/85`;
+---
+
+{href ? <a href={href} class={classes}><slot /></a> : <button class={classes}><slot /></button>}
