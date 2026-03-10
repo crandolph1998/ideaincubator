@@ -1,0 +1,50 @@
+---
+import '@/styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Idea Incubator — Growth Partner for Ambitious Agencies',
+  description = 'Strategy, design, and development systems that help agencies scale predictable demand.'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="grid-bg">
+    <header class="sticky top-0 z-30 border-b border-white/10 bg-background/85 backdrop-blur">
+      <div class="container flex items-center justify-between py-4">
+        <a href="/" class="text-lg font-semibold tracking-tight">Idea Incubator</a>
+        <nav class="hidden items-center gap-8 text-sm md:flex">
+          <a href="#services" class="text-white/75 transition hover:text-white">Services</a>
+          <a href="#proof" class="text-white/75 transition hover:text-white">Proof</a>
+          <a href="#process" class="text-white/75 transition hover:text-white">Process</a>
+          <a href="#faq" class="text-white/75 transition hover:text-white">FAQ</a>
+          <a href="#contact" class="rounded-full border border-white/20 px-4 py-2 text-white hover:border-accent hover:text-accent">Book Call</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="border-t border-white/10 py-10">
+      <div class="container flex flex-col gap-4 text-sm text-white/65 md:flex-row md:items-center md:justify-between">
+        <p>© {new Date().getFullYear()} Idea Incubator. All rights reserved.</p>
+        <p>Built in Astro + Tailwind with scalable shadcn-style components.</p>
+      </div>
+    </footer>
+  </body>
+</html>
