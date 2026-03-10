@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = 'Idea Incubator — Growth Partner for Ambitious Agencies',
-  description = 'Strategy, design, and development systems that help agencies scale predictable demand.'
+  title = 'Idea Incubator — Content Marketing & SEO Services',
+  description = 'Content writing, link building, digital PR, and managed SEO services without long-term contracts.'
 } = Astro.props;
 ---
 
@@ -25,25 +25,38 @@ const {
     <title>{title}</title>
   </head>
   <body class="grid-bg">
-    <header class="sticky top-0 z-30 border-b border-white/10 bg-background/85 backdrop-blur">
+    <div class="bg-accent py-3 text-center text-sm font-medium text-foreground">
+      Ready to make content marketing work for you? Book a call today.
+    </div>
+    <header class="sticky top-0 z-30 border-b border-border bg-background/95 backdrop-blur">
       <div class="container flex items-center justify-between py-4">
         <a href="/" class="text-lg font-semibold tracking-tight">Idea Incubator</a>
         <nav class="hidden items-center gap-8 text-sm md:flex">
-          <a href="#services" class="text-white/75 transition hover:text-white">Services</a>
-          <a href="#proof" class="text-white/75 transition hover:text-white">Proof</a>
-          <a href="#process" class="text-white/75 transition hover:text-white">Process</a>
-          <a href="#faq" class="text-white/75 transition hover:text-white">FAQ</a>
-          <a href="#contact" class="rounded-full border border-white/20 px-4 py-2 text-white hover:border-accent hover:text-accent">Book Call</a>
+          <a href="#services" class="text-muted transition hover:text-foreground">Services</a>
+          <a href="#testimonials" class="text-muted transition hover:text-foreground">Testimonials</a>
+          <a href="#contact" class="text-muted transition hover:text-foreground">Contact</a>
+          <a href="#contact" class="rounded-full border border-border bg-white px-4 py-2 text-foreground transition hover:border-primary hover:text-primary">Book A Free Call</a>
         </nav>
       </div>
     </header>
     <main>
       <slot />
     </main>
-    <footer class="border-t border-white/10 py-10">
-      <div class="container flex flex-col gap-4 text-sm text-white/65 md:flex-row md:items-center md:justify-between">
-        <p>© {new Date().getFullYear()} Idea Incubator. All rights reserved.</p>
-        <p>Built in Astro + Tailwind with scalable shadcn-style components.</p>
+    <footer class="mt-20 border-t border-border bg-white py-12">
+      <div class="container space-y-8">
+        <p class="text-xl font-semibold">Idea Incubator</p>
+        <div class="grid gap-8 text-sm text-muted md:grid-cols-3">
+          <div>
+            <p class="font-semibold text-foreground">Company</p>
+          </div>
+          <div>
+            <p class="font-semibold text-foreground">Useful Links</p>
+          </div>
+          <div>
+            <p class="font-semibold text-foreground">Contact</p>
+          </div>
+        </div>
+        <p class="text-sm text-muted">Copyright © 2026 — Idea Incubator, LLC</p>
       </div>
     </footer>
   </body>

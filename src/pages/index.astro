@@ -4,157 +4,129 @@ import Button from '@/components/ui/Button.astro';
 import Card from '@/components/ui/Card.astro';
 import SectionHeading from '@/components/ui/SectionHeading.astro';
 
+const logos = ['Proxycurl', 'The Happier Hustle', 'Email Engineers', 'Woop Insurance', 'Sqribble', 'MyServiceArea', 'Sapiengraph', 'KE'];
+
 const services = [
   {
-    title: 'Positioning & Offer Strategy',
-    text: 'Turn vague service menus into a clear premium offer that wins better-fit clients faster.'
+    title: 'Content Writing',
+    description: 'SEO-optimized blog posts, articles, and web copy that engages your audience, drives organic traffic, and converts.',
+    items: [
+      'Research-driven blog posts and articles',
+      'Product descriptions that convert',
+      'Website copy and landing pages',
+      'Industry-specific content strategies',
+      'AI-optimized formatting for search visibility'
+    ]
   },
   {
-    title: 'Website Rebuilds in Astro',
-    text: 'Launch high-performing marketing sites with conversion UX, on-brand storytelling, and technical SEO.'
+    title: 'Link Building',
+    description: 'Strategic link placement services that boost your domain authority and search rankings.',
+    items: [
+      'High-quality niche edits and link insertions',
+      'Guest posting on relevant industry sites',
+      'Contextual link excerpts in existing content',
+      'Authority site partnerships',
+      'White-hat link acquisition strategies'
+    ]
   },
   {
-    title: 'Demand Infrastructure',
-    text: 'Install lead capture, attribution, and nurture systems so growth becomes repeatable, not random.'
-  }
-];
-
-const proof = [
-  ['+211%', 'Increase in SQLs after messaging and site overhaul'],
-  ['1.2s', 'Average page load on new launches'],
-  ['38%', 'Lift in booked calls from CTA and funnel updates']
-];
-
-const steps = [
-  {
-    name: 'Sprint 01 — Diagnose',
-    text: 'Audit your acquisition funnel, positioning, analytics, and close-rate blockers.'
+    title: 'Digital PR',
+    description: 'Press release distribution and PR campaigns that build brand authority and earn quality backlinks.',
+    items: [
+      'Professional press release writing and distribution',
+      'Media outreach to industry publications',
+      'Brand mention campaigns',
+      'Newsworthy content development',
+      'PR-driven link building opportunities'
+    ]
   },
   {
-    name: 'Sprint 02 — Design',
-    text: 'Craft messaging hierarchy, page wireframes, visual direction, and trust architecture.'
-  },
-  {
-    name: 'Sprint 03 — Build',
-    text: 'Develop in Astro + Tailwind with reusable components and performance-first implementation.'
-  },
-  {
-    name: 'Sprint 04 — Scale',
-    text: 'Run CRO experiments, sharpen offers, and optimize traffic-to-call conversion each month.'
-  }
-];
-
-const faqs = [
-  {
-    q: 'Do you only work with agencies?',
-    a: 'Primarily, yes. We specialize in agency growth systems and service business positioning.'
-  },
-  {
-    q: 'Can you migrate from Webflow/WordPress?',
-    a: 'Yes. We can migrate content and rebuild your site in Astro while preserving SEO-critical structure.'
-  },
-  {
-    q: 'What is a typical timeline?',
-    a: 'Most rebuilds ship in 3–6 weeks depending on scope, pages, and integrations.'
+    title: 'Full-Service Managed SEO',
+    description: 'Comprehensive SEO management combining content, links, and technical optimization for maximum results.',
+    items: [
+      'Complete SEO strategy development',
+      'Content creation and link building integration',
+      'Technical SEO audits and implementation',
+      'Performance tracking and reporting',
+      'Custom campaigns tailored to your industry'
+    ]
   }
 ];
 ---
 
-<BaseLayout>
-  <section class="container py-24 md:py-28">
-    <div class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-      <div class="space-y-8">
-        <p class="inline-flex rounded-full border border-accent/35 bg-accent/10 px-3 py-1 text-xs uppercase tracking-[.2em] text-accent">Agency Growth Partner</p>
-        <h1 class="text-balance text-4xl font-semibold tracking-tight md:text-6xl">Rebuild your agency website into a client acquisition engine.</h1>
-        <p class="max-w-2xl text-lg text-white/75">We help ambitious agencies clarify positioning, modernize their digital presence, and install growth systems that compound. This rebuild uses Astro.js + Tailwind and shadcn-style components for speed and scalability.</p>
-        <div class="flex flex-wrap gap-4">
-          <Button href="#contact">Book a strategy call</Button>
-          <Button href="#services" variant="outline">See capabilities</Button>
-        </div>
+<BaseLayout title="Idea Incubator | Content Marketing & SEO" description="We write content your audience, search engines, and AI answer engines love.">
+  <section class="container py-20 md:py-24">
+    <div class="space-y-8">
+      <div class="space-y-5">
+        <h1 class="max-w-5xl text-balance text-4xl font-semibold tracking-tight md:text-6xl">
+          We Write Content That Your Target Audience, Search Engines, and AI Answer Engines Love
+        </h1>
+        <p class="max-w-4xl text-lg text-muted">
+          While other content marketing and SEO agencies deliver cookie-cutter fluff that not a single person would want to read, we deliver
+          well-researched, informative, and engaging content that truly delivers on search intent. We can also take care of everything else you need
+          to grow your brand awareness and authority, such as backlinks, press releases, and more.
+        </p>
+        <p class="max-w-4xl text-lg text-muted">
+          The best part? Zero contracts. You buy the exact deliverables you need at an affordable rate, as you need them. Or, we can manage it all
+          for you, and we'll tell you what you need. Your choice.
+        </p>
       </div>
-      <Card>
-        <p class="text-sm uppercase tracking-[.15em] text-accent">What you get</p>
-        <ul class="mt-4 space-y-3 text-white/80">
-          <li>• Clear conversion path from hero to CTA</li>
-          <li>• Premium visual direction and messaging hierarchy</li>
-          <li>• Lightning-fast Astro architecture for SEO and UX</li>
-          <li>• Modular component system for rapid iteration</li>
-        </ul>
-      </Card>
+      <div class="flex flex-wrap gap-4">
+        <Button href="#services">Get Started</Button>
+        <Button href="#contact" variant="outline">Book A Free Call</Button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-10">
+    <SectionHeading eyebrow="Trusted by Many" title="Trusted by Many" />
+    <div class="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
+      {logos.map((logo) => (
+        <div class="rounded-xl border border-border bg-white px-4 py-4 text-center text-sm font-medium text-muted">{logo}</div>
+      ))}
     </div>
   </section>
 
   <section id="services" class="container py-16">
-    <SectionHeading
-      eyebrow="Services"
-      title="Everything needed to turn traffic into qualified calls"
-      description="Strategy and execution across positioning, conversion UX, and growth operations."
-    />
-    <div class="mt-10 grid gap-6 md:grid-cols-3">
+    <SectionHeading eyebrow="Services" title="Explore Our SEO Services" />
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
       {services.map((service) => (
         <Card>
-          <h3 class="text-xl font-medium">{service.title}</h3>
-          <p class="mt-3 text-white/75">{service.text}</p>
+          <h3 class="text-2xl font-semibold">{service.title}</h3>
+          <p class="mt-3 text-muted">{service.description}</p>
+          <ul class="mt-4 space-y-2 text-muted">
+            {service.items.map((item) => (
+              <li>• {item}</li>
+            ))}
+          </ul>
         </Card>
       ))}
     </div>
   </section>
 
-  <section id="proof" class="container py-16">
-    <SectionHeading
-      eyebrow="Proof"
-      title="Outcomes over activity"
-      description="Every engagement is measured against revenue-driving metrics, not vanity numbers."
-    />
-    <div class="mt-10 grid gap-6 md:grid-cols-3">
-      {proof.map(([value, label]) => (
-        <Card>
-          <p class="text-4xl font-semibold text-accent">{value}</p>
-          <p class="mt-3 text-white/75">{label}</p>
-        </Card>
-      ))}
-    </div>
-  </section>
-
-  <section id="process" class="container py-16">
-    <SectionHeading
-      eyebrow="Process"
-      title="A simple 4-sprint system"
-      description="Structured delivery model designed for fast wins and long-term scale."
-    />
-    <div class="mt-10 grid gap-6 md:grid-cols-2">
-      {steps.map((step, idx) => (
-        <Card>
-          <p class="text-sm uppercase tracking-[.12em] text-accent">Step {idx + 1}</p>
-          <h3 class="mt-2 text-xl font-medium">{step.name}</h3>
-          <p class="mt-3 text-white/75">{step.text}</p>
-        </Card>
-      ))}
-    </div>
-  </section>
-
-  <section id="faq" class="container py-16">
-    <SectionHeading eyebrow="FAQ" title="Common questions" />
-    <div class="mt-10 space-y-4">
-      {faqs.map((faq) => (
-        <Card>
-          <h3 class="text-lg font-medium">{faq.q}</h3>
-          <p class="mt-2 text-white/75">{faq.a}</p>
-        </Card>
-      ))}
+  <section id="testimonials" class="container py-16">
+    <SectionHeading eyebrow="Testimonials" title="What clients have to say" />
+    <div class="mt-8">
+      <Card>
+        <p class="text-lg text-foreground/90">
+          “I have been working with these guys for years now! With lots of hard work and timely communication, they made sure they delivered the best
+          to me. Highly recommended!”
+        </p>
+        <p class="mt-5 font-semibold">— John Doe</p>
+        <p class="text-sm text-muted">Company Name</p>
+      </Card>
     </div>
   </section>
 
   <section id="contact" class="container py-16">
     <Card>
       <SectionHeading
-        eyebrow="Start"
-        title="Want this level of clarity and conversion on your site?"
-        description="Share your goals and we’ll map the highest-leverage opportunities in a free strategy call."
+        eyebrow="Final CTA"
+        title="Ready to Get More Customers Through Content?"
+        description="Let’s create a content marketing system that consistently attracts qualified leads and turns your expertise into revenue. Book a free strategy call to see how we can help."
       />
-      <div class="mt-7 flex flex-wrap gap-4">
-        <Button href="mailto:hello@ideaincubator.co">hello@ideaincubator.co</Button>
-        <Button href="https://cal.com" variant="outline">Schedule on Cal</Button>
+      <div class="mt-8">
+        <Button href="#">Book Your Free Strategy Call</Button>
       </div>
     </Card>
   </section>

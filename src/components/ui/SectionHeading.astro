@@ -11,10 +11,10 @@ const { eyebrow, title, description, center = false } = Astro.props;
 
 <div class:list={[center && 'text-center', 'space-y-3']}>
   {eyebrow && (
-    <p class="inline-flex rounded-full border border-accent/35 bg-accent/10 px-3 py-1 text-xs uppercase tracking-[.2em] text-accent">
+    <p class="inline-flex rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs uppercase tracking-[.2em] text-primary">
       {eyebrow}
     </p>
   )}
   <h2 class="text-balance text-3xl font-semibold tracking-tight md:text-4xl">{title}</h2>
-  {description && <p class="max-w-2xl text-white/75 md:text-lg">{description}</p>}
+  {description && <p class="max-w-2xl text-muted md:text-lg">{description}</p>}
 </div>
