@@ -21,6 +21,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+<<<<<<< codex/rebuild-agency-website-in-astro.js-with-tailwind-kmn791
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+=======
+>>>>>>> main
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -31,6 +38,12 @@ jobs:
         run: npm install
 
       - name: Build Astro site
+<<<<<<< codex/rebuild-agency-website-in-astro.js-with-tailwind-kmn791
+        env:
+          ASTRO_SITE: ${{ steps.pages.outputs.origin }}
+          ASTRO_BASE: ${{ steps.pages.outputs.base_path }}
+=======
+>>>>>>> main
         run: npm run build
 
       - name: Upload Pages artifact
