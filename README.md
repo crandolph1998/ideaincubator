@@ -20,6 +20,7 @@ npm run preview
 ```
 
 ## Deploy to GitHub Pages
+<<<<<<< codex/rebuild-agency-website-in-astro.js-with-tailwind-kmn791
 This project is configured to deploy with **GitHub Actions** via `.github/workflows/deploy.yml`.
 
 ### Do I need GitHub Actions, or can I just click "Rebuild" after merge?
@@ -51,3 +52,17 @@ No adapter is required for GitHub Pages here because the site is static (`output
 ### Styling issue on Pages (unstyled black/white page)
 If your HTML loads but looks unstyled, the CSS asset path is usually wrong for your Pages base URL.
 This repo now builds with `ASTRO_BASE` and `ASTRO_SITE` from `actions/configure-pages`, so generated asset URLs match your actual Pages path automatically.
+=======
+This project is already configured for GitHub Pages via `.github/workflows/deploy.yml`.
+
+### One-time GitHub setup
+1. Push this repo to GitHub.
+2. In **Settings → Pages**, set **Source** to **GitHub Actions**.
+3. Ensure your default deployment branch is `main` (or update the workflow trigger).
+
+### Deploy
+Every push to `main` triggers a build and deployment.
+
+### Do you need an Astro adapter?
+No adapter is required for GitHub Pages because this site is built as static output (`output: 'static'`) and deployed from the generated `dist/` folder.
+>>>>>>> main
