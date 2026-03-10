@@ -5,11 +5,11 @@ interface Props {
 }
 
 const { href, variant = 'default' } = Astro.props;
-const base = 'inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-semibold transition';
+const base = 'inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition duration-200';
 const classes =
   variant === 'outline'
-    ? `${base} border border-accent text-foreground hover:bg-white`
-    : `${base} bg-primary text-white hover:opacity-90`;
+    ? `${base} border border-accent text-foreground hover:bg-white hover:shadow-soft`
+    : `${base} bg-primary text-white shadow-soft hover:-translate-y-0.5 hover:opacity-95`;
 ---
 
 {href ? <a href={href} class={classes}><slot /></a> : <button class={classes}><slot /></button>}

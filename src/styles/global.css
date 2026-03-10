@@ -12,5 +12,25 @@ body {
 }
 
 .container {
-  @apply mx-auto max-w-6xl px-6;
+  @apply mx-auto w-full max-w-6xl px-6;
+}
+
+.site-header {
+  @apply border-b border-transparent bg-background/80 backdrop-blur transition-all duration-300;
+}
+
+.site-header.is-stuck {
+  @apply fixed left-0 right-0 top-0 z-50 border-border shadow-soft;
+  animation: dropDown 0.25s ease-out;
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-12px);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
