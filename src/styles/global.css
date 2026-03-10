@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -17,11 +13,4 @@ body {
 
 .container {
   @apply mx-auto max-w-6xl px-6;
-}
-
-.grid-bg {
-  background-image: radial-gradient(circle at top, rgb(124 58 237 / .2), transparent 35%),
-    linear-gradient(to right, rgb(255 255 255 / .04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(255 255 255 / .04) 1px, transparent 1px);
-  background-size: auto, 42px 42px, 42px 42px;
 }
